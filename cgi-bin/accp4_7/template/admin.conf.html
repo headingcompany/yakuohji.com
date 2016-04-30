@@ -1,0 +1,410 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+$COOKIE$
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	a		{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.ListHeader	{
+		BACKGROUND: #3A6EA5;
+		BORDER-BOTTOM: #003366 1px solid;
+		BORDER-LEFT: #99CCFF 1px solid;
+		BORDER-RIGHT: #003366 1px solid;
+		BORDER-TOP: #99CCFF 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 2px;
+	}
+</STYLE>
+<script language="JavaScript">
+<!--//
+	function AuthflagChange() {
+		var selectedNum = document.form.AUTHFLAG.selectedIndex;
+		if(selectedNum == 1) {
+			document.form.PASSWORD.disabled = false;
+			document.form.PASSWORD.style.backgroundColor='#FFFFFF';
+		} else {
+			document.form.PASSWORD.disabled = true;
+			document.form.PASSWORD.style.backgroundColor='#D4D0C8';
+		}
+	}
+	function Url2pathChange() {
+		var selectedNum = document.form.URL2PATH_FLAG.selectedIndex;
+		if(selectedNum == 1) {
+			document.form.URL2PATH_URL.disabled = false;
+			document.form.URL2PATH_URL.style.backgroundColor='#FFFFFF';
+			document.form.URL2PATH_PATH.disabled = false;
+			document.form.URL2PATH_PATH.style.backgroundColor='#FFFFFF';
+		} else {
+			document.form.URL2PATH_URL.disabled = true;
+			document.form.URL2PATH_URL.style.backgroundColor='#D4D0C8';
+			document.form.URL2PATH_PATH.disabled = true;
+			document.form.URL2PATH_PATH.style.backgroundColor='#D4D0C8';
+		}
+	}
+	function LotationChange() {
+		var selectedNum = document.form.LOTATION.selectedIndex;
+		if(selectedNum == 0) {
+			document.form.LOTATION_SIZE.disabled = true;
+			document.form.LOTATION_SIZE.style.backgroundColor='#D4D0C8';
+			document.form.LOTATION_SAVE.disabled = true;
+			document.form.LOTATION_SAVE.style.backgroundColor='#D4D0C8';
+		} else if(selectedNum == 1) {
+			document.form.LOTATION_SIZE.disabled = false;
+			document.form.LOTATION_SIZE.style.backgroundColor='#FFFFFF';
+			document.form.LOTATION_SAVE.disabled = false;
+			document.form.LOTATION_SAVE.style.backgroundColor='#FFFFFF';
+		} else {
+			document.form.LOTATION_SIZE.disabled = true;
+			document.form.LOTATION_SIZE.style.backgroundColor='#D4D0C8';
+			document.form.LOTATION_SAVE.disabled = false;
+			document.form.LOTATION_SAVE.style.backgroundColor='#FFFFFF';
+		}
+	}
+	
+	function UsecookieChange() {
+		var selectedNum = document.form.USECOOKIE.selectedIndex;
+		if(selectedNum == 0) {
+			document.form.EXPIREDAYS.disabled = true;
+			document.form.EXPIREDAYS.style.backgroundColor='#D4D0C8';
+		} else {
+			document.form.EXPIREDAYS.disabled = false;
+			document.form.EXPIREDAYS.style.backgroundColor='#FFFFFF';
+		}
+	}
+	
+	function help(target){
+		var SWA
+		SWA = window.open(target,"help","WIDTH=500,HEIGHT=300,toolbar=no,location=no,status=no,menubar=no,directories=no,scrollbars=yes");
+		SWA.focus();
+	}
+
+//-->
+</script>
+
+<title> </title>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="AuthflagChange();Url2pathChange();LotationChange();UsecookieChange()">
+<center>
+<table border="0"><tr>
+  <td><div class="size4">■ 高機能アクセス解析 CGI 設定 ■</div></td>                                          
+</table>
+
+<form method="POST" action="admin.cgi" name="form">
+<input type="hidden" name="action" value="setconf">
+<table border="0" cellspacing="1" cellpadding="1"><tr><td bgcolor="#000000">
+  <table border="0" cellspacing="1" cellpadding="2">
+    <tr>
+      <td class="ListHeader" nowrap> 
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ イメージディレクトリの URL</font></td>         
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=IMAGE_URL')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>                       
+      <td bgcolor="#FFFFFF" nowrap><input type="text" name="IMAGE_URL" size="50" value="$IMAGE_URL$"></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ アクセス制限機能</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=AUTHFLAG')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="AUTHFLAG" onChange="AuthflagChange();">
+          <option value="0" $AUTHFLAG0$>OFF</option>
+          <option value="1" $AUTHFLAG1$>ON</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ パスワード</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=PASSWORD')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#FFFFFF" nowrap><input type="password" name="PASSWORD" size="20" value="$PASSWORD$"></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ URL マッピング機能</font></td>         
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=URL2PATH_FLAG')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>                        
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="URL2PATH_FLAG" onChange="Url2pathChange();">
+          <option value="0" $URL2PATH_FLAG0$>しない</option>
+          <option value="1" $URL2PATH_FLAG1$>する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ URL マッピング</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=URL2PATH')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>                        
+      <td bgcolor="#FFFFFF" nowrap>
+        <table border="0">
+          <tr>
+            <td nowrap>URL</td>
+            <td nowrap><input type="text" name="URL2PATH_URL" size="50" value="$URL2PATH_URL$"></td>
+          </tr>
+          <tr>
+            <td colspan="2" nowrap>
+              <p align="center">↓</td>
+          </tr>
+          <tr>
+            <td nowrap>パス</td>
+            <td nowrap><input type="text" name="URL2PATH_PATH" size="50" value="$URL2PATH_PATH$"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ 時差の調整</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=TIMEDIFF')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#FFFFFF" nowrap>サーバの時間から <input type="text" name="TIMEDIFF" size="2" value="$TIMEDIFF$">　時間進める</td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ 棒グラフの長さ</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=GRAPHMAXLENGTH')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>  
+      <td bgcolor="#FFFFFF" nowrap><input type="text" name="GRAPHMAXLENGTH" size="5" value="$GRAPHMAXLENGTH$"> 
+        ピクセル</td> 
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ 表示ランキング数</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=ROW')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#FFFFFF" nowrap><input type="text" name="ROW" size="5" value="$ROW$"> 
+        位まで表示する</td> 
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ ローテーション設定</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=LOTATION')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="LOTATION" onChange="LotationChange();">
+          <option value="0" $LOTATION0$>ローテーションしない</option>
+          <option value="1" $LOTATION1$>ログサイズでローテーション</option>
+          <option value="2" $LOTATION2$>日ごとにローテーション</option>
+          <option value="3" $LOTATION3$>月ごとにローテーション</option>
+          <option value="4" $LOTATION4$>週ごとにローテーション</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ ローテーションサイズ</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=LOTATION_SIZE')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>
+      <td bgcolor="#FFFFFF" nowrap><input type="text" name="LOTATION_SIZE" size="8" value="$LOTATION_SIZE$"> 
+        バイト</td> 
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ 過去ログ保存</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=LOTATION_SAVE')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="LOTATION_SAVE">
+          <option value="0" $LOTATION_SAVE0$>削除する</option>
+          <option value="1" $LOTATION_SAVE1$>保存する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ リンク元解析 除外 URL</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=MY_SITE_URLs')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>                         
+      <td bgcolor="#FFFFFF" nowrap><textarea rows="3" name="MY_SITE_URLs" cols="39">$MY_SITE_URLs$</textarea></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ ロギング除外ホスト</font></td>        
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=REJECT_HOSTS')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#FFFFFF" nowrap><textarea rows="3" name="REJECT_HOSTS" cols="39">$REJECT_HOSTS$</textarea></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■         
+              ディレクトリインデックス</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=DIRECTORYINDEX')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#FFFFFF" nowrap><textarea rows="3" name="DIRECTORYINDEX" cols="16">$DIRECTORYINDEX$</textarea></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ アクセスページ URL  
+              の扱い</font></td>  
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&amp;item=URLHANDLE')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>   
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="URLHANDLE" onChange="UsecookieChange();">
+          <option value="0" $URLHANDLE0$>何もしない</option>
+          <option value="1" $URLHANDLE1$>? 以降は無視する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ Cookie 利用設定</font></td>    
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=USECOOKIE')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>   
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="USECOOKIE" onChange="UsecookieChange();">
+          <option value="0" $USECOOKIE0$>使わない</option>
+          <option value="1" $USECOOKIE1$>使う</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>　
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ Cookie 有効期限</font></td>   
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=EXPIREDAYS')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td>   
+      <td bgcolor="#FFFFFF" nowrap><input type="text" name="EXPIREDAYS" size="4" value="$EXPIREDAYS$"> 
+        日</td>   
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■    
+              セッションインターバル</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=INTERVAL')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#FFFFFF" nowrap><input type="text" name="INTERVAL" size="6" value="$INTERVAL$"> 
+        秒</td> 
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■    
+              ログファイルのロック処理</font></td>
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=LOCK_FLAG')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="LOCK_FLAG">
+          <option value="0" $LOCK_FLAG0$>しない</option>
+          <option value="1" $LOCK_FLAG1$>する</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ 円グラフの方式</font></td>   
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=CIRCLE_GLAPH')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="CIRCLE_GLAPH">
+          <option value="0" $CIRCLE_GLAPH0$>Flash</option>
+          <option value="1" $CIRCLE_GLAPH1$>Javaアプレット</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td class="ListHeader" nowrap>
+        <table border="0" width="100%">
+          <tr>
+            <td nowrap><font color="#FFFFFF">■ </font><font color="#FFFFFF">解析タグの表示画像形式</font></td> 
+            <td nowrap align="right"><a href="JavaScript:help('admin.cgi?action=help&item=IMAGE_TYPE')"><font color="#FFFFFF">？</font></a></td>
+          </tr>
+        </table>
+      </td> 
+      <td bgcolor="#FFFFFF" nowrap><select size="1" name="IMAGE_TYPE">
+          <option value="0" $IMAGE_TYPE0$>自動認識</option>
+          <option value="1" $IMAGE_TYPE1$>GIF</option>
+          <option value="2" $IMAGE_TYPE2$>JPEG</option>
+          <option value="3" $IMAGE_TYPE3$>PNG</option>
+        </select></td>
+    </tr>
+  </table>
+</td></tr></table>
+
+
+<p>
+<input type="submit" value="設定" name="B1">
+</p>
+
+</form>
+<hr>
+$COPYRIGHT$
+</body>
+</html>
+
+

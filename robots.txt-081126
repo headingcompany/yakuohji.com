@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /common/
+Disallow: /contents/
+Disallow: /images/
+Disallow: /mt/

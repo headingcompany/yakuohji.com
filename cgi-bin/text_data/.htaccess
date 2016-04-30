@@ -1,0 +1,5 @@
+AuthUserFile /virtual/hdg/public_html/www.yakuohji.com/cgi-bin/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user

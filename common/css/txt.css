@@ -1,0 +1,123 @@
+
+
+* {
+	line-height:150%;
+	font-size:12px;
+	font-family: "£Í£Ó £Ð¥´¥·¥Ã¥¯", Osaka, "¥Ò¥é¥®¥Î³Ñ¥´ Pro W3";
+}
+
+h1, h2 {
+	margin:0;
+	padding:0;
+}
+
+a {
+ overflow:hidden;
+}
+
+.ti {
+	text-indent:-9999em;
+}
+
+.bDisp {
+	display:block;
+}
+
+.txt {
+	font-size:95%;
+	line-height:140%;
+}
+
+.relPosi { position:relative; }
+.abPosi { position:absolute; }
+
+.nonDisp {
+	display:none;
+}
+.bDisp {
+	display:block;
+}
+
+.nonMp {
+	margin:0;
+	padding:0;
+}
+
+.autoM {
+	margin-right: auto;
+	margin-left: auto;
+}
+.autoL {
+	margin-left: auto;
+}
+
+.mL10px {
+	margin-left:10px;
+}
+.mT10px {
+	margin-top:10px;
+}
+.mT45px {
+	margin-top:45px;
+}
+.p5px {
+	padding:5px;
+}
+
+.nonMark li {
+	list-style-type: none;
+}
+
+.flL {
+	float:left;
+}
+.flR {
+	float:right;
+}
+
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   height: 0;
+   visibility: hidden;
+}
+.clearfix { display: inline-block; }
+/* exlude MacIE5 \*/
+* html .clearfix { height: 1% }
+.clearfix {display:block;}
+/* end MacIE5 */
+
+
+.w335px {
+	width: 335px;
+}
+.w510px {
+	width: 510px;
+}
+.w545px {
+	width: 545px;
+}
+.w650px {
+	width: 650px;
+}
+.w695px {
+	width: 695px;
+}
+.w800px {
+	width: 800px;
+}
+.w950px {
+	width: 950px;
+}
+
+
+.w4em {
+	width:4em;
+}
+.w8em {
+	width:8em;
+}
+.w10em {
+	width:10em;
+}

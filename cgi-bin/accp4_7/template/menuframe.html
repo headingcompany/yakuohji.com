@@ -1,0 +1,474 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<TITLE><!--COPYRIGHT--></TITLE>
+<STYLE TYPE="text/css">
+<!--
+	a:hover { color: red;}
+	a {font-size: 12px;}
+	div	{ font-size: 12px; text-autospace: ideograph-alpha;}
+	table	{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+
+	.ListHeader	{
+		BACKGROUND: #3A6EA5;
+		BORDER-BOTTOM: #003366 1px solid;
+		BORDER-LEFT: #99CCFF 1px solid;
+		BORDER-RIGHT: #003366 1px solid;
+		BORDER-TOP: #99CCFF 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 2px;
+	}
+
+-->
+</STYLE>
+</head>
+
+<body TOPMARGIN=10 LEFTMARGIN=10 BGCOLOR= "#FFFFFF" LINK= "#000066" VLINK= "#666666" TEXT= "#000000">
+<!--COPYRIGHT2-->
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td nowrap><!--LastMonth--></td>
+    <td nowrap><!--ThisMonth--></td>
+    <td nowrap><!--NextMonth--></td>
+    <td nowrap> <a href="<!--ALLACCURL-->" target="_top">全期間</a></td>
+  </tr>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="0">
+<tr>
+  <td><img src="<!--IMAGEDIR-->/sun.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/mon.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/tue.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/wed.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/thu.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/fri.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/sat.gif" border="0" width="17" height="17"></td>
+</tr>
+<!--calendar-->
+</table>
+<p align="center">
+<!--loglist-->
+</p>
+<div>解析モード：<!--ACCMODE--></div>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+  <img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;概要</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17"  border="0"></a></td>
+          <td><a style="text-decoration: none">&nbsp;</a><a href="<!--CGIURL-->" target="FRAME2" style="text-decoration:none">統計概要</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=AccessLogInformation" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td><a style="text-decoration: none">&nbsp;</a><a href="<!--CGIURL-->&ITEM=AccessLogInformation" target="FRAME2" style="text-decoration:none">アクセスログ情報</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=LogSearch" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td><a style="text-decoration: none">&nbsp;</a><a href="<!--CGIURL-->&ITEM=LogSearch" target="FRAME2" style="text-decoration:none">生ログ検索</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;訪問者分析</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopVisitors" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td><a style="text-decoration: none">&nbsp;</a><a href="<!--CGIURL-->&ITEM=TopVisitors" target="FRAME2" style="text-decoration:none">ホスト名</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=MostActiveCountries" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=MostActiveCountries" target="FRAME2" style="text-decoration:none">国（TLD）</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=MostActivePrefecture" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td><a style="text-decoration: none">&nbsp;</a><a href="<!--CGIURL-->&ITEM=MostActivePrefecture" target="FRAME2" style="text-decoration:none">都道府県</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=MostActiveOrganization" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=MostActiveOrganization" target="FRAME2" style="text-decoration:none">組織</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=NewVsReturningVisitors" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=NewVsReturningVisitors" target="FRAME2" style="text-decoration:none">リピータ比率</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;アクセスページ分析</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopPagesByViews" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopPagesByViews" target="FRAME2" style="text-decoration:none">ページビュー</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopPagesByVisits" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopPagesByVisits" target="FRAME2" style="text-decoration:none">セッション数</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopPagesByVisitors" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopPagesByVisitors" target="FRAME2" style="text-decoration:none">訪問者数</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=VisitorTrace" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=VisitorTrace" target="FRAME2" style="text-decoration:none">訪問者追跡</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;時間別アクセス分布</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=ActivityByDayOfTheMonth" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=ActivityByDayOfTheMonth" target="FRAME2" style="text-decoration:none">日別アクセス数</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=ActivityByDayOfTheWeek" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td><a href="<!--CGIURL-->&ITEM=ActivityByDayOfTheWeek" target="FRAME2" style="text-decoration:none">&nbsp;曜日別アクセス数</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=ActivityByHourOfTheDay" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=ActivityByHourOfTheDay" target="FRAME2" style="text-decoration:none">時間別アクセス数</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;アクセス元分析</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopReferringSites" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopReferringSites" target="FRAME2" style="text-decoration:none">リンク元サイト</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopReferringURLs" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopReferringURLs" target="FRAME2" style="text-decoration:none">リンク元URL</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopSearchKeywords" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopSearchKeywords" target="FRAME2" style="text-decoration:none">検索キーワード</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopSearchEngines" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopSearchEngines" target="FRAME2" style="text-decoration:none">検索エンジン</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;OS/ブラウザー分析</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopBrowsers" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td><a style="text-decoration: none">&nbsp;</a><a href="<!--CGIURL-->&ITEM=TopBrowsers" target="FRAME2" style="text-decoration:none">ブラウザー</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopAcceptLanguage" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopAcceptLanguage" target="FRAME2" style="text-decoration:none">表示言語</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopPlatforms" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td><a style="text-decoration: none">&nbsp;</a><a href="<!--CGIURL-->&ITEM=TopPlatforms" target="FRAME2" style="text-decoration:none">ＯＳ</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;画面情報分析</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopResolution" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopResolution" target="FRAME2" style="text-decoration:none">解像度</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopColorDepth" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopColorDepth" target="FRAME2" style="text-decoration:none">色深度</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="<!--CGIURL-->&ITEM=TopVideoMemorySize" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="<!--CGIURL-->&ITEM=TopVideoMemorySize" target="FRAME2" style="text-decoration:none">ビデオメモリ</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/property.gif" width="17" height="17" border="0"></td>
+          <td>&nbsp;設定情報</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="admin.cgi?action=conf" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="admin.cgi?action=conf" target="FRAME2" style="text-decoration:none">CGI設定</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="admin.cgi?action=log" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="admin.cgi?action=log" target="FRAME2" style="text-decoration:none">アクセスログ管理</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line.gif" width="17" height="17" border="0"></td>
+          <td><a href="admin.cgi?action=restrict" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="admin.cgi?action=restrict" target="FRAME2" style="text-decoration:none">自アクセス除外設定</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17" border="0"></td>
+          <td><a href="admin.cgi?action=system" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17" border="0"></a></td>
+          <td>&nbsp;<a href="admin.cgi?action=system" target="FRAME2" style="text-decoration:none">システム診断</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<hr>
+<!--COPYRIGHT3-->
+
+</body>
+</HTML>

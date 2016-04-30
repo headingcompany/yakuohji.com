@@ -1,0 +1,23 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+#www統一対応
+RewriteCond %{HTTP_HOST} ^yakuohji\.com
+RewriteRule (.*) http://www.yakuohji.com/$1 [R=301,L]
+
+#index.html非表示設定
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ http://www.yakuohji.com/$1 [R=301,L]
+
+#URL置き換え 引数
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?con=$1
+
+##php
+#ZendFramework:func:Smarty
+php_value include_path "/virtual/hdg/php_include/ZendFramework/library:/virtual/hdg/php_include/func:/virtual/hdg/php_include/Smarty/libs:/virtual/hdg/public_html/www.yakuohji.com/contents/tpl"
+
+#404 対応
+ErrorDocument 404 http://www.yakuohji.com/index.html
+

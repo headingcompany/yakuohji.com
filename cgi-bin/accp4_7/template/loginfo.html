@@ -1,0 +1,116 @@
+<HTML>
+
+<HEAD>
+<meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<TITLE><!--COPYRIGHT--></TITLE>
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.ListHeader	{
+		BACKGROUND: #3A6EA5;
+		BORDER-BOTTOM: #003366 1px solid;
+		BORDER-LEFT: #99CCFF 1px solid;
+		BORDER-RIGHT: #003366 1px solid;
+		BORDER-TOP: #99CCFF 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 2px;
+	}
+	.ListHeader2	{
+		BACKGROUND: #EAEAEA;
+		BORDER-BOTTOM: #FFFFFF 1px solid;
+		BORDER-LEFT: #5F5F5F 1px solid;
+		BORDER-RIGHT: #FFFFFF 1px solid;
+		BORDER-TOP: #5F5F5F 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 0px;
+	}
+	.ListHeader3	{
+		BACKGROUND: #969696;
+		BORDER-BOTTOM: #000000 1px solid;
+		BORDER-LEFT: #FFFFFF 1px solid;
+		BORDER-RIGHT: #000000 1px solid;
+		BORDER-TOP: #FFFFFF 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 0px;
+	}
+	.ListHeader4	{
+		BACKGROUND: #EAEAEA;
+		BORDER-BOTTOM: #FFFFFF 1px solid;
+		BORDER-LEFT: #5F5F5F 1px solid;
+		BORDER-RIGHT: #FFFFFF 1px solid;
+		BORDER-TOP: #5F5F5F 1px solid;
+		COLOR: #000000;
+		PADDING-LEFT: 3px;
+	}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<!--著作権表示は、シェアウェア登録していない場合には、削除厳禁！-->
+<!--著作権表示ここから-->
+<div ALIGN="RIGHT">
+<!--COPYRIGHT4-->
+</div>
+<!--著作権表示ここまで-->
+<br>
+<b class="size4">アクセスログ情報</b>
+<br>
+<br>
+<div class="size4">現在解析対象のログ</div>
+<TABLE BORDER="0">
+<form action="$CGIURL$" method="POST" target="_top">
+<TR>
+  <TD BGCOLOR="#3A6EA5" CLASS=ListHeader><FONT COLOR="#FFFFFF">ログファイル</FONT></TD>
+  <TD BGCOLOR="#EAEAEA" ALIGN="left">$LOGFILE$ 
+</TD>
+</TR>
+<TR>
+  <TD BGCOLOR="#3A6EA5" CLASS=ListHeader><FONT COLOR="#FFFFFF">ログファイルサイズ</FONT></TD>
+  <TD BGCOLOR="#EAEAEA" ALIGN="left">$LOGSIZE$</TD> 
+</TR>
+<TR>
+  <TD BGCOLOR="#3A6EA5" CLASS=ListHeader><FONT COLOR="#FFFFFF">ログローテーション</FONT></TD>
+  <TD BGCOLOR="#EAEAEA" ALIGN="left">$LOGLOTATION$</TD> 
+</TR>
+</form>
+</TABLE>
+
+<HR>
+
+<div class="size4">ログ一覧</div>
+<table border="1" cellspacing="0" cellpadding="3">
+  <tr>
+    <td class="ListHeader">ファイル名</td>
+    <td class="ListHeader">サイズ</td>
+    <td class="ListHeader">最終更新日時</td>
+    <td class="ListHeader">ログ切替</td>
+  </tr>
+$LOGALLLIST$
+</table>
+<br>
+<HR>
+
+<!--著作権表示は、シェアウェア登録していない場合には、削除厳禁！-->
+<!--著作権表示ここから-->
+<div><!--COPYRIGHT3--></div>
+<!--著作権表示ここまで-->
+
+
+<BR><BR>
+</BODY>
+</HTML>
+
+
+
+

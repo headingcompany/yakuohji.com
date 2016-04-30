@@ -1,0 +1,1 @@
+20100105034254 ntkngw230033.kngw.nt.ftth.ppp.infoweb.ne.jp 58.1.176.33.1262630575 - - - "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; GTB6; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Sleipnir/2.9.2)" "ja" "1280 800 32"

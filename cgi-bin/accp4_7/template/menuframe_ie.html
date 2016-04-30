@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<TITLE><!--COPYRIGHT--></TITLE>
+<STYLE TYPE="text/css">
+<!--
+	a:hover { color: red;}
+	a {font-size: 12px;}
+	div	{ font-size: 12px; text-autospace: ideograph-alpha;}
+	img	{ border: 0;}
+	img	{ vertical-align: middle;}
+	table	{ font-size: 12px; }
+	form	{ font-size: 12px; }
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+-->
+</STYLE>
+<script language=JavaScript>
+<!--
+	function clickHandler() {
+		var targetId, srcElement, targetElement;
+		srcElement = window.event.srcElement;
+		if (srcElement.className == "Outline") {
+			targetId = srcElement.id + "d";
+			targetElement = document.all(targetId);
+			if (targetElement.style.display == "none") {
+				targetElement.style.display = "";
+				srcElement.src = "<!--IMAGEDIR-->/folder_o.gif";
+			} else {
+				targetElement.style.display = "none";
+				srcElement.src = "<!--IMAGEDIR-->/folder_c.gif";
+			}
+		}
+	}
+	document.onclick = clickHandler;
+
+	function toggle(e) {
+		if (e.style.display == "none") {
+			e.style.display = ""
+		} else {
+			e.style.display = "none"
+		}
+	}
+-->
+</script>
+</head>
+
+
+<body TOPMARGIN=10 LEFTMARGIN=10 BGCOLOR= "#FFFFFF" LINK= "#000066" VLINK= "#666666" TEXT= "#000000">
+<!--COPYRIGHT2-->
+<br>
+<table border="0" cellspacing="0" cellpadding="1">
+  <tr>
+    <td nowrap><!--LastMonth--></td>
+    <td nowrap><!--ThisMonth--></td>
+    <td nowrap><!--NextMonth--></td>
+    <td nowrap> <a href="<!--ALLACCURL-->" target="_top">全期間</a></td>
+  </tr>
+</table>
+
+<table border="3" cellspacing="0" cellpadding="0">
+<tr>
+  <td><img src="<!--IMAGEDIR-->/sun.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/mon.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/tue.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/wed.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/thu.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/fri.gif" border="0" width="17" height="17"></td>
+  <td><img src="<!--IMAGEDIR-->/sat.gif" border="0" width="17" height="17"></td>
+</tr>
+<!--calendar-->
+</table>
+<p align="center">
+<!--loglist-->
+</p>
+<div>解析モード：<!--ACCMODE--></div>
+</p>
+<div id=Out1>
+	<img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" id=Out1-1 class=Outline style="cursor: hand">&nbsp;概要<br>
+	<div id=Out1-1d style="display:">
+		<img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;統計概要</a><br>
+		<img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=AccessLogInformation" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;アクセスログ情報</a><br>
+		<img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=LogSearch" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;生ログ検索</a><br>
+	</div>
+</div>
+
+<div id=Out8>
+  <img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" id=Out8-1 class=Outline style="cursor: hand">&nbsp;訪問者分析<br>
+  <div id=Out8-1d style="display:">
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopVisitors" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;ホスト名</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=MostActiveCountries" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;国（TLD）</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=MostActivePrefecture" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;都道府県</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=MostActiveOrganization" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;組織</a><br>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=NewVsReturningVisitors" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;リピータ比率</a><br>
+  </div>
+</div>
+
+<div id=Out7>
+  <img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" id=Out7-1 class=Outline style="cursor: hand">&nbsp;アクセスページ分析<br>
+  <div id=Out7-1d style="display:">
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopPagesByViews" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;ページビュー</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopPagesByVisits" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;セッション数</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopPagesByVisitors" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;訪問者数</a><br>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=VisitorTrace" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;訪問者追跡</a><br>
+  </div>
+</div>
+
+<div id=Out3>
+  <img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" id=Out3-1 class=Outline style="cursor: hand">&nbsp;時間別アクセス分布<br>
+  <div id=Out3-1d style="display:">
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=ActivityByDayOfTheMonth" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;日別アクセス数</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=ActivityByDayOfTheWeek" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;曜日別アクセス数</a><br>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=ActivityByHourOfTheDay" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;時間別アクセス数</a><br>
+  </div>
+</div>
+<div id=Out4>
+  <img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" id=Out4-1 class=Outline style="cursor: hand">&nbsp;アクセス元分析<br>
+  <div id=Out4-1d style="display:">
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopReferringSites" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;リンク元サイト</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopReferringURLs" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;リンク元URL</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopSearchKeywords" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;検索キーワード</a><br>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopSearchEngines" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;検索エンジン</a><br>
+  </div>
+</div>
+<div id=Out5>
+  <img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" id=Out5-1 class=Outline style="cursor: hand">&nbsp;OS/ブラウザー分析<br>
+  <div id=Out5-1d style="display:">
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopBrowsers" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;ブラウザー</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopAcceptLanguage" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;表示言語</a><br>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopPlatforms" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;ＯＳ</a><br>
+  </div>
+</div>
+<div id=Out6>
+  <img src="<!--IMAGEDIR-->/folder_o.gif" width="17" height="17" id=Out6-1 class=Outline style="cursor: hand">&nbsp;画面情報分析<br>
+  <div id=Out6-1d style="display:">
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopResolution" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;解像度</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopColorDepth" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;色深度</a><br>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="<!--CGIURL-->&ITEM=TopVideoMemorySize" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;ビデオメモリ</a><br>
+  </div>
+</div>
+
+<div id=Out9>
+  <img src="<!--IMAGEDIR-->/property.gif" width="17" height="17" onclick="toggle(document.all.text1)" style="cursor: hand">&nbsp;設定情報<br>
+  <div id=text1 style="display:None">
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="admin.cgi?action=conf" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;CGI設定</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="admin.cgi?action=log" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;アクセスログ管理</a><br>
+    <img src="<!--IMAGEDIR-->/line.gif" width="17" height="17"><a href="admin.cgi?action=restrict" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;自アクセス除外設定</a><br>
+    <img src="<!--IMAGEDIR-->/line_bottom.gif" width="17" height="17"><a href="admin.cgi?action=system" target="FRAME2" style="text-decoration:none"><img src="<!--IMAGEDIR-->/file.gif" width="17" height="17">&nbsp;システム診断</a><br>
+  </div>
+</div>
+<hr>
+<!--COPYRIGHT3-->
+
+</body>
+</HTML>

@@ -1,0 +1,25 @@
+body{
+font-size:12px;
+}
+
+td{
+font-size:12px;
+}
+
+A{
+	color : #ff2200;
+	text-decoration: none;
+
+}
+
+A:hover{
+	color : #0066ff;
+	text-decoration: none;
+
+}
+
+h1 {
+	font-size:12px;
+	margin:0;
+	padding:0;
+}

@@ -1,0 +1,157 @@
+<HTML>
+
+<HEAD>
+<meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<TITLE><!--COPYRIGHT--></TITLE>
+<STYLE TYPE="text/css">
+	table	{ font-size: 12px; }
+	a:hover { color: red;}
+	form	{ font-size: 12px; }
+	div	{ font-size: 12px; }
+	img	{ vertical-align: middle;}
+	.size1	{ font-size: 8px }
+	.size2	{ font-size: 10px }
+	.size3	{ font-size: 12px }
+	.size4	{ font-size: 14px }
+	.size5	{ font-size: 18px }
+	.size6	{ font-size: 20px }
+	.size7	{ font-size: 24px }
+	.ListHeader	{
+		BACKGROUND: #3A6EA5;
+		BORDER-BOTTOM: #003366 1px solid;
+		BORDER-LEFT: #99CCFF 1px solid;
+		BORDER-RIGHT: #003366 1px solid;
+		BORDER-TOP: #99CCFF 1px solid;
+		COLOR: #FFFFFF;
+		PADDING-LEFT: 2px;
+	}
+	.ListHeader2	{
+		BACKGROUND: #EAEAEA;
+		BORDER-BOTTOM: #FFFFFF 1px solid;
+		BORDER-LEFT: #5F5F5F 1px solid;
+		BORDER-RIGHT: #FFFFFF 1px solid;
+		BORDER-TOP: #5F5F5F 1px solid;
+		COLOR: #000000;
+		PADDING-LEFT: 3px;
+	}
+	.style1	{
+		background-color:#EAEAEA;
+		border-top:#FFFFFF 1px solid;
+		border-bottom:#777777 1px solid;
+	}
+	.style2	{
+		background-color:#D4D0C8;
+		border-top:#FFFFFF 1px solid;
+		border-bottom:#777777 1px solid;
+	}
+</STYLE>
+<script language="javascript">
+<!-- 
+function initForm() {
+	if(document.form.MODE[0].checked == false && document.form.MODE[1].checked == false) {
+		document.form.MODE[0].checked = true;
+	}
+	dateOptionChange();
+}
+
+function dateOptionChange() {
+	if(document.form.DATE[0].checked == true) {
+		document.form.SYEAR.disabled = true;
+		document.form.SYEAR.style.backgroundColor='#D4D0C8';
+		document.form.EYEAR.disabled = true;
+		document.form.EYEAR.style.backgroundColor='#D4D0C8';
+		document.form.SMON.disabled = true;
+		document.form.SMON.style.backgroundColor='#D4D0C8';
+		document.form.EMON.disabled = true;
+		document.form.EMON.style.backgroundColor='#D4D0C8';
+		document.form.SDAY.disabled = true;
+		document.form.SDAY.style.backgroundColor='#D4D0C8';
+		document.form.EDAY.disabled = true;
+		document.form.EDAY.style.backgroundColor='#D4D0C8';
+	} else if(document.form.DATE[1].checked == true) {
+		document.form.SYEAR.disabled = false;
+		document.form.SYEAR.style.backgroundColor='#FFFFFF';
+		document.form.EYEAR.disabled = false;
+		document.form.EYEAR.style.backgroundColor='#FFFFFF';
+		document.form.SMON.disabled = false;
+		document.form.SMON.style.backgroundColor='#FFFFFF';
+		document.form.EMON.disabled = false;
+		document.form.EMON.style.backgroundColor='#FFFFFF';
+		document.form.SDAY.disabled = false;
+		document.form.SDAY.style.backgroundColor='#FFFFFF';
+		document.form.EDAY.disabled = false;
+		document.form.EDAY.style.backgroundColor='#FFFFFF';
+	} else {
+		document.form.DATE[0].checked = true;
+		document.form.SYEAR.disabled = true;
+		document.form.SYEAR.style.backgroundColor='#D4D0C8';
+		document.form.EYEAR.disabled = true;
+		document.form.EYEAR.style.backgroundColor='#D4D0C8';
+		document.form.SMON.disabled = true;
+		document.form.SMON.style.backgroundColor='#D4D0C8';
+		document.form.EMON.disabled = true;
+		document.form.EMON.style.backgroundColor='#D4D0C8';
+		document.form.SDAY.disabled = true;
+		document.form.SDAY.style.backgroundColor='#D4D0C8';
+		document.form.EDAY.disabled = true;
+		document.form.EDAY.style.backgroundColor='#D4D0C8';
+	}
+}
+//-->
+</script>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onload="initForm()">
+
+<!--著作権表示は、シェアウェア登録していない場合には、削除厳禁！-->
+<!--著作権表示ここから-->
+<div ALIGN="RIGHT">
+<!--COPYRIGHT4-->
+</div>
+<!--著作権表示ここまで-->
+<br>
+<b class="size4">生ログ検索</b>
+<br>
+<br>
+<form method="POST" action="$CGI_URL$" name="form">
+$HIDDEN$
+  <div class="size3">検索条件</div>
+  <table border="1" cellspacing="0">
+    <tr>
+      <td class="ListHeader">検索モード</td>
+      <td class="ListHeader2"><input type="radio" value="1" name="MODE" $MODE1$>直近のログだけを検索表示する　　<input type="radio" value="2" name="MODE" $MODE2$>ログの先頭から順次検索表示する</td>
+    </tr>
+    <tr>
+      <td class="ListHeader">日付指定</td>
+      <td class="ListHeader2"><input type="radio" value="0" name="DATE" $DATE0$ onclick="dateOptionChange()">未指定　<input type="radio" value="1" name="DATE" $DATE1$ onclick="dateOptionChange()">指定する　西暦<input type="text" name="SYEAR" size="4" value="$SYEAR$">年    
+        <input type="text" name="SMON" size="2" value="$SMON$">月 <input type="text" name="SDAY" size="2" value="$SDAY$">日    
+        ～ 西暦<input type="text" name="EYEAR" size="4" value="$EYEAR$">年 <input type="text" name="EMON" size="2" value="$EMON$">月    
+        <input type="text" name="EDAY" size="2" value="$EDAY$">日まで</td>
+    </tr>
+    <tr>
+      <td class="ListHeader">検索文字列</td>
+      <td class="ListHeader2"><input type="text" name="QSTRING" size="85" value="$QSTRING$"></td>
+    </tr>
+    <tr>
+      <td class="ListHeader">表示件数</td>
+      <td class="ListHeader2">
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50%"><input type="text" name="DISPNUM" size="4" value="$DISPNUM$"> 件</td>  
+            <td width="50%" align="right"><input type="submit" value="　検　索　" name="B3"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<p>$HITNUM$</p>
+<!-- delimiter -->
+
+</BODY>
+</HTML>
+
+
+
+

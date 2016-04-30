@@ -1,0 +1,67 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+#www統一対応
+RewriteCond %{HTTP_HOST} ^yakuohji\.com
+RewriteRule (.*) http://www.yakuohji.com/$1 [R=301,L]
+
+
+#GoogleサイトMapの検出
+#cgiへのリダイレクトのために英数字を引数とする処理が行なわれるが、
+#それを避けるため、sitemapファイルだけをマッチさせる
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*/googlea94e74cd90031e7d\.html$ http://www.yakuohji.com/googlea94e74cd90031e7d.html? [L]
+
+#YahooサイトMapの検出
+#cgiへのリダイレクトのために英数字を引数とする処理が行なわれるが、
+#「_」にマッチしないため、マッチさせる必要が無い
+
+
+#index.html非表示設定
+RewriteCond %{THE_REQUEST} ^.*/main.html
+RewriteRule ^(.*)main.html$ http://www.yakuohji.com/$1 [R=301,L]
+
+#index.html非表示設定
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ http://www.yakuohji.com/$1 [R=301,L]
+
+
+#ファイル名省略時にTOPページを表示する
+RewriteCond %{THE_REQUEST} ^.*/
+RewriteRule ^$ /cgi-bin/index/index.cgi?con=$1&$2 [L]
+
+
+#mtフォルダのリダイレクト
+RewriteRule ^mt/(.*)$ http://www.yakuohji.com/ [R=301,L] 
+
+#index.cgiのアドレスをすべて301リダイレクトする
+RewriteCond %{THE_REQUEST} ^.*/index\.cgi
+RewriteCond %{QUERY_STRING} ^con=([A-Za-z0-9_\-]+)&(.*)$ [OR]
+RewriteCond %{QUERY_STRING} ^con=([A-Za-z0-9_\-]+)$
+RewriteRule ^.*/index\.cgi$ /%1\.html? [R=301,L]
+
+#URL置き換え .html→.cgi
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([0-9A-Za-z]+).html?(.*)$ /cgi-bin/index/index.cgi?con=$1&$2 [L]
+RewriteRule ^event_([0-9A-Za-z]+).html?(.*)$ /cgi-bin/ivent_pop/ivent_pop.cgi?ID=$1&$2 [L]
+RewriteRule ^history_([0-9A-Za-z]+).html?(.*)$ /cgi-bin/history_pop/history_pop.cgi?ID=$1&$2 [L]
+RewriteRule ^greet_([0-9A-Za-z]+).html?(.*)$ /cgi-bin/greet_pop/greet_pop.cgi?ID=$1&$2 [L]
+
+
+#URL置き換え 引数
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^info/(.*)$ info/info.php?con=$1
+
+##php
+#ZendFramework:func:Smarty
+php_value include_path "/virtual/hdg/php_include/ZendFramework/library:/virtual/hdg/php_include/func:/virtual/hdg/php_include/Smarty/libs:/virtual/hdg/public_html/www.yakuohji.com/contents/tpl"
+
+
+#移転時リダイレクト設定
+#Redirect 301 /index.html http://www.hoo-sumai.com/index.php
+
+#404 対応
+#ErrorDocument 404 http://www.yakuohji.com/index.html
+

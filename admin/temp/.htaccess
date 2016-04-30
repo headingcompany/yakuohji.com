@@ -1,0 +1,5 @@
+AuthUserFile /virtual/hdg/.htpasswdYakuohji
+AuthGroupFile /dev/null
+AuthName "admin Only"
+AuthType Basic
+require valid-user
