@@ -1,0 +1,2 @@
+20170425144402 42-151-44-185.rev.home.ne.jp 42.151.44.185.1493099042 - http://www.yakuohji.com/contents/ivent/ivent_0204/ivent_0204_i%2Bi.html http://www.yakuohji.com/special.html&ID=20020426 "Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko" "ja-JP" "1366 768 24"
+20170425144410 42-151-44-185.rev.home.ne.jp 42.151.44.185.1493099050 - http://www.yakuohji.com/contents/ivent/ivent_0204/ivent_0204_i+i_1.html http://www.yakuohji.com/contents/ivent/ivent_0204/ivent_0204_i%2Bi.html "Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko" "ja-JP" "1366 768 24"

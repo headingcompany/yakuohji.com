@@ -481,7 +481,7 @@ print <<"EOF";
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 EOF
-print '<title>真言宗 < ' . $title . $spTit . $bdr . '七国山薬王寺 | 真言宗豊山派 東京都青梅市にあるつつじのお寺</title>
+print '<title>' . $title . $spTit . $bdr . '七国山薬王寺 | 真言宗豊山派 東京都青梅市にあるつつじのお寺</title>
 <meta name="description" content="'. $title . $spTit . $bdr . '東京都青梅市にある、真言宗豊山派のお寺・七国山薬王寺です。つつじの開花状況は毎日更新します。">
 <meta name="keywords" content="'. $title . $cnm .'真言宗,豊山,派,祈願,護摩,水子供養,先祖供養,つつじ,開花">';
 print <<"EOF";
@@ -499,7 +499,7 @@ print <<"EOF";
 <td valign="top">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><h1><a href="/index.html" target="_self" class="title ti bDisp" title="真言宗">真言宗 < $title$spTit$bdr七国山薬王寺 | 真言宗豊山派 東京都青梅市にあるつつじのお寺</a></h1></td>
+    <td><h1><a href="/index.html" target="_self" class="title ti bDisp" title="$title$spTit$bdr七国山薬王寺 | 真言宗豊山派 東京都青梅市にあるつつじのお寺">$title$spTit$bdr七国山薬王寺 | 真言宗豊山派 東京都青梅市にあるつつじのお寺</a></h1></td>
     <td width="10">　</td>
   </tr>
 </table>
@@ -508,7 +508,6 @@ print <<"EOF";
 EOF
 
 if ($con eq "main") { &con_main; }
-
 
 print <<"EOF";
 </td>
@@ -520,7 +519,7 @@ print <<"EOF";
   </tr>
   <tr>
     <td>
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
 EOF
 
 if ($P1 eq "topnew") { &topnew; }
@@ -576,9 +575,7 @@ print <<"EOF";
 <td align="right"><FONT color="ffffff">copyright 2000-2009 yakuohji.</FONT></td>
 </tr>
 <tr> 
-<td align="left">
-<a href="http://www.hdg.jp/" target="_blank" title="インターネット広告"><strong>インターネット広告</strong></a> | <a href="http://www.feinauto.com/" target="_blank" title="ファインオート"><strong>ファインオート</strong></a> | <a href="http://www.rockets-tyc.com/" target="_blank" title="ロケッツ"><strong>ロケッツ</strong></a> | <a href="http://www.tsa1-midori.com/" target="_blank" title="タイヤ販売"><strong>タイヤ販売</strong></a>
-</td>
+<td align="left"></td>
 </tr>
 </table>
 <!--Google Anaylytics：ここから-->
@@ -592,17 +589,6 @@ var pageTracker = _gat._getTracker("UA-779505-5");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 <!--Google Anaylytics：ここまで-->
-<!--Yahoo-->
-<script type="text/javascript" src="http://i.yimg.jp/images/analytics/js/ywa.js"></script>
-<script type="text/javascript">
-var YWATracker = YWA.getTracker("1000278625716");
-YWATracker.addExcludeProtocol("file:");
-YWATracker.submit();
-</script>
-<noscript>
-<div><img src="http://by.analytics.yahoo.co.jp/p.pl?a=1000278625716&amp;js=no" width="1" height="1" alt="" /></div>
-</noscript>
-<!--Yahoo-->
 </body>
 </html>
 EOF
@@ -1203,6 +1189,11 @@ EOF
 sub main_top {
 print <<"EOF";
 <TABLE width="430" cellpadding="3" cellspacing="3" bgcolor="#ff6600">
+	<TR> 
+		<TD>
+			<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="true" data-href="https://www.facebook.com/yakuohji/videos/903223793061260/"><div class="fb-xfbml-parse-ignore"><blockquote cite="/yakuohji/videos/903223793061260/"><a href="/yakuohji/videos/903223793061260/"></a><p>バーチャル参拝、的な…</p>Posted by <a href="https://www.facebook.com/yakuohji">真言宗 豊山派 七国山 薬王寺</a> on 2015年4月27日</blockquote></div></div>
+		</TD>
+	</TR>
 EOF
 foreach $data3 (@NEW2) {
 ($ID,$TITLE,$UY,$UM,$UD,$EY,$EM,$ED,$COM) = split(/\,/,$data3);
